@@ -27,5 +27,13 @@ body {
 }
 
 .bird {
+  --bird-top: -1000;
+  --bird-size: 60px;
   background-color: #dfbf20;
+  position: absolute;
+  width: var(--bird-size);
+  height: var(--bird-size);
+  left: var(--bird-size);
+  top: calc(var(--bird-top) * 1px);
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */

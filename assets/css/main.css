@@ -2,4 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.title {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+.bird {
+  background-color: #dfbf20;
 }/*# sourceMappingURL=main.css.map */

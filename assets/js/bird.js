@@ -1,13 +1,17 @@
 const birdElem = document.querySelector('[data-bird]');
+const BIRD_SPEED = 5;
 
 export function updateBird(delta) {
+	setTop(getTop() + BIRD_SPEED);
 	console.log(getTop());
 }
 
 function setTop(top) {
-	birdElement.style.setProperty('--bird-top', top);
+	birdElem.style.setProperty('--bird-top', top);
 }
 
 function getTop() {
-	return getComputedStyle(birdElem).getPropertyValue('--bird-top');
+	return parseFloat(
+		getComputedStyle(birdElem).getPropertyValue('--bird-top')
+	);
 }

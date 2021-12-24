@@ -11,9 +11,12 @@ export function setupBird() {
 
 export function updateBird(delta) {
 	if (timeSinceLastJump < JUMP_DURATION) {
+		setTop(getTop() - BIRD_SPEED * delta);
+	} else {
 		setTop(getTop() + BIRD_SPEED * delta);
 	}
-	console.log(getTop());
+
+	timeSinceLastJump += delta;
 }
 
 function setTop(top) {

@@ -1,5 +1,5 @@
 import { updateBird, setupBird, getBirdRect } from './bird.js';
-import { setupPipes, updatePipes } from './pipe.js';
+import { setupPipes, updatePipes, getPassedPipesCount } from './pipe.js';
 
 document.addEventListener('keypress', handleStart, { once: true });
 const title = document.querySelector('[data-title]');
@@ -39,7 +39,7 @@ function handleLose() {
 	setTimeout(() => {
 		title.classList.remove('hide');
 		subtitle.classList.remove('hide');
-		subtitle.textContent = '0 Pipes';
+		subtitle.textContent = `${getPassedPipesCount()} Pipes`;
 		document.addEventListener('keypress', handleStart, { once: true });
 	}, 100);
 }

@@ -9,6 +9,7 @@ let passedPipeCount;
 export function setupPipes() {
 	document.documentElement.style.setProperty('--pipe-width', PIPE_WIDTH);
 	document.documentElement.style.setProperty('--hole-height', HOLE_HEIGHT);
+	pipes.forEach((pipe) => pipe.remove());
 	timeSinceLastPipe = PIPE_INTERVAL;
 	passedPipeCount = 0;
 }

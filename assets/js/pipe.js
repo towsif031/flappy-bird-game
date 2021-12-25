@@ -3,11 +3,12 @@ const PIPE_WIDTH = 120;
 const PIPE_INTERVAL = 1500;
 const PIPE_SPEED = 0.75;
 const pipes = [];
-let timeSinceLastPipe = 0;
+let timeSinceLastPipe;
 
 export function setupPipes() {
 	document.documentElement.style.setProperty('--pipe-width', PIPE_WIDTH);
 	document.documentElement.style.setProperty('--hole-height', HOLE_HEIGHT);
+	timeSinceLastPipe = PIPE_INTERVAL;
 }
 
 export function updatePipes(delta) {
